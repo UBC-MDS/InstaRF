@@ -1,0 +1,16 @@
+Package: InstaRF
+Type: Package
+Title: Image Processing
+Version: 0.1.0
+Authors@R: c(
+  person("Betty", "Zhou", email = "Betty_zhou@live.ca", role = c("aut", "cre")),
+  person("Linyang", "Yu", email = " ", role = c("aut")),
+  person("Simon", "Chiu", email = " ", role = c("aut")),
+  person("Reza", "Bagheri", email = " ", role = c("aut")))
+Description: This package performs image processing using Gaussian blurring, Laplacian edge detection, and color changing on .png images.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.1.1
+Suggests: 
+    testthat
