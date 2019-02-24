@@ -39,7 +39,7 @@ Image processing uses computer algorithms to enhance an image or to extract usef
     * Testing units for RGB channel: [test_RGB_manipulation.R](test_r/test_RGB_manipulation.R)
   * [CONTRIBUTING.md](CONTRIBUTING.md)
   * [Code_of_CONDUCT.md](Code_of_CONDUCT.md)
-  * [LICENSE.txt](LICENSE.txt)
+  * [LICENSE](LICENSE)
   * README.md
   
 ## Installation (*** needs update ***)
@@ -121,11 +121,7 @@ After:
 
 <img src="InstaF_Python/test/test_image/IMG_2037.PNG" border = "5" width="199" height="253"/>
 
-## Package dependencies (*** needs update ***)
+## Package dependencies
 |||
 |---|---|
-|numpy|             pandas|
-|pytest|            os|
-|skimage|           skimage.color|
-|skimage.transform| skimage.io|
-|matplotlib|        matplotlib.pyplot|
+|testthat|             png|
