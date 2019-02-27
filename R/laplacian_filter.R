@@ -18,6 +18,13 @@ laplacian_filter <- function(input_img, output_img) {
   #
   
   #import input & make a copy called "output"
+  mtry <- try(readPNG(input_img), 
+              silent = TRUE)
+  
+  if (class(mtry) == "try-error") {
+    stop("File doesn't exist!")
+  }
+  
   input <- readPNG(input_img)
   output <- input
   
