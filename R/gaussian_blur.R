@@ -15,10 +15,10 @@ library(spatialfil)
 
 gaussian_blur <- function(input_image_directory, output_image_directory, sigma){
 
-  input_img <- readPNG(input_image_directory)
+  input_img <- png::readPNG(input_image_directory)
   image_demention <- dim(input_img)
 
-  filter <- convKernel(sigma =sigma , k = "gaussian")
+  filter <- spatialfil::convKernel(sigma =sigma , k = "gaussian")
   full_f_matrix <- filter$matrix
 
   # find the 3X3 KERNEL MATRIX
@@ -63,7 +63,7 @@ gaussian_blur <- function(input_image_directory, output_image_directory, sigma){
     }
   }
 }
-writePNG(output_img, output_image_directory)
+png::writePNG(output_img, output_image_directory)
 
 return(output_img)
 
