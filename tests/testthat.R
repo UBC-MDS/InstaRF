@@ -1,5 +1,5 @@
 library(testthat)
-library(InstaRF)
+library(png)
 library(testit)
 library(InstaRF)
 

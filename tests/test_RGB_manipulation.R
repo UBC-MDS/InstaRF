@@ -1,18 +1,4 @@
-context("test_rgbmanipulation")
-
-# Copyright 2018 Betty Zhou
-# This script contains tests for the RGB_manipulation function
-
-#' @param input_path string, path to the input .png file
-#' @param R int, a weight value for red channel, equal to or greater than 0.
-#' @param G int, a weight value for green channel, equal to or greater than 0.
-#' @param B int, a weight value for blue channel, equal to or greater than 0.
-#' @param output_path string, path to the output .png file
-#' @return png file at the output path
-#' @export
-#'
-#' @examples
-#' RGB_manipulation("input.png", "output.png", R = 5L, G = 1L, B = 1L)
+context("test-rgbmanipulation")
 
 library(testthat)
 library(png)
