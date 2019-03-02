@@ -16,10 +16,8 @@ Suggests:
     testthat,
     InstaRF,
     knitr,
-    rmarkdown
-Imports: 
-    nlme,
-    rpart,
-    Matrix,
-    spatstat
+    rmarkdown,
+    png,
+    spatialfil,
+    testit
 VignetteBuilder: knitr
