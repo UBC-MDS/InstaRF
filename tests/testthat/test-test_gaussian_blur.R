@@ -57,6 +57,11 @@ test_that('function working with RBG image',{
   expect_equivalent(dim(output_img), dim(expect_output_img))
 })
 
+# test gaussian_blur's normal function on rbg
+test_that('function working with RBG image',{
+  expect_equivalent(output_img, expect_output_img, tolerance = 1e-2)
+})
+
 
 #
 # test how well function handle wrong input
