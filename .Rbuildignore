@@ -1,2 +1,4 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
+^CONTRIBUTING.md
+^Code_of_CONDUCT.md
