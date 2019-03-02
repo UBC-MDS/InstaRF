@@ -19,5 +19,6 @@ Suggests:
     rmarkdown,
     png,
     spatialfil,
-    testit
+    testit,
+    covr
 VignetteBuilder: knitr
