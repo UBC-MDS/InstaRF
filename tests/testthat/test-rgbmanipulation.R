@@ -20,7 +20,7 @@ test_img_RGB_manipulation_input <- array(c(c(12, 24, 48,
                                              51, 12, 24)),  #B
                                          dim = c(3,3,3))
 
-writePNG(test_img_RGB_manipulation_input/255, "test_img/test_img_RGB_manipulation_input.png")
+writePNG(test_img_RGB_manipulation_input/255, testthat::test_path("test_img/test_img_RGB_manipulation_input.png"))
 
 # test output: RGB_manipulated image
 

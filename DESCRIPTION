@@ -13,4 +13,13 @@ Encoding: UTF-8
 LazyData: true
 RoxygenNote: 6.1.1
 Suggests: 
-    testthat
+    testthat,
+    InstaRF,
+    knitr,
+    rmarkdown
+Imports: 
+    nlme,
+    rpart,
+    Matrix,
+    spatstat
+VignetteBuilder: knitr
