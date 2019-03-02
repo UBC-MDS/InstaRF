@@ -14,6 +14,7 @@ library(spatstat)
 library(spatialfil)
 
 
+
 # the normal rbg image and its gaussian output
 input_img <- readPNG("tests/test_img/input_image.png")
 output_img <- gaussian_blur("tests/test_img/input_image.png", "tests/test_img/function_output.png",sigma = 1)
@@ -38,7 +39,18 @@ test_that('function working with RBG image',{
 
 
 # test how well function handle wrong input
-test_that("function return error massage when the input is wrong",{
-  expect_that(gaussian_blur("This is not a image matrix", "test_img/wrong_input.png",sigma = 1), ("wrong input type"))
+test_that("function return error massage when the input type is wrong",{
+  expect_error(gaussian_blur(123, "tests/test_img/wrong_input.png",sigma = 1))
 })
+
+test_that('function input path is incorrect',{
+  expect_error(gaussian_blur("./1234/123.png", "tests/test_img/wrong_input.png",sigma = 1))
+})
+
+test_that('function output path is incorrect',{
+  expect_error(gaussian_blur("tests/test_img/input_image.png", 123, sigma = 1))
+})
+
+
+
 
