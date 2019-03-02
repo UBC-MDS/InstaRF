@@ -1,7 +1,4 @@
-# This script contains tests for the laplacian_filter function
-
-# input: image in .png format
-# output: a Laplacian edge detecting image in .png format
+context("test-laplacian_edge_detecting")
 
 library(testthat)
 library(png)
@@ -19,7 +16,7 @@ test_img_laplacian_input <- array(c(c(12, 171, 48,
                                       168, 209, 60)),  #B
                                   dim = c(3,3,3))
 
-test_img_laplacian_input <- readPNG("test_img_laplacian_input.png")
+test_img_laplacian_input <- readPNG("test_img/test_img_laplacian_input.png")
 # test output: Image with the Laplacian filter applied on it
 # filter is [[0,-1,	0],[-1,4,-1],[0,-1,	0]] and boundary is symm
 
@@ -38,10 +35,12 @@ test_img_laplacian_ex_output = array(c(c(72, 255, 255,
 # Correcting the scale from (0, 255) in here to (0, 1) as PNG getting loaded in
 test_img_laplacian_ex_output <- (255 - test_img_laplacian_ex_output)/255
 
-test_img_laplacian_output <- laplacian_filter("test_img_laplacian_input.png", "test_img_laplacian_output.png")
+test_img_laplacian_output <- laplacian_filter("test_img/test_img_laplacian_input.png", "test_img/test_img_laplacian_output.png")
 
 # Check whether laplacian_filter function is working properly
-expect_equivalent(test_img_laplacian_output, test_img_laplacian_ex_output)
+test_that('output match expectation',{
+  expect_equivalent(test_img_laplacian_output, test_img_laplacian_ex_output)
+})
 
 #Handling the exceptions with laplacian_filter()
 test_that('function input is the right type',{
@@ -53,17 +52,17 @@ test_that('function output is the right type',{
 })
 
 test_that('function input path is incorrect',{
-  expect_error(laplacian_filter(1234, "test_r/test_image/laplacian_output.png"))
+  expect_error(laplacian_filter(1234, "test_img/test_img_laplacian_output.png"))
 })
 
 test_that('input type is incorrect',{
-  expect_error(laplacian_filter("test_r/test_image/test.txt", "test_r/test_image/laplacian_output.png"))
+  expect_error(laplacian_filter("test_img/test.txt", "test_img/test_img_laplacian_output.png"))
 })
 
 test_that('function input path is incorrect',{
-  expect_error(laplacian_filter("./1234/123.png", "test_r/test_image/laplacian_output.png"))
+  expect_error(laplacian_filter("./1234/123.png", "test_img/test_img_laplacian_output.png"))
 })
 
 test_that('function output path is incorrect',{
-  expect_error(laplacian_filter("test_py/test_image/test_img_laplacian_input.png", 1234))
+  expect_error(laplacian_filter("test_img/test_img_laplacian_input.png", 1234))
 })
