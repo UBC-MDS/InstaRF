@@ -99,7 +99,7 @@ Before:
 
 After:
 
-<img src="tests/testthat/test_img/Carnovsky_RGB_manipulated.png" border = "5" width="350" height="157"/>
+<img src="tests/test_img/Carnovsky_RGB_manipulated.png" border = "5" width="350" height="157"/>
 
 
 #### 3. Laplacian Edge Detecting
@@ -138,6 +138,13 @@ and R cmd test was also passed:
 
 <img src="tests/testthat/test_img/CMD_check_results.png" border = "5" width="400" height="253"/>
 
+## Unit tests results
+
+In the root of the repository, input `devtool::test()` or `devtool::check()`, the former will generate the test units reports and the later will give you a full report of the package.
+
+Results for `devtool::test()`
+
+<img src="tests/testthat/test_img/test_result.png" border = "5" width="400" height="253"/>
 
 ## Package dependencies
 ||||
