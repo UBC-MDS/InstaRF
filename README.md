@@ -128,15 +128,15 @@ The package passed all the tests that were planned before.
 
 It had 100% branch coverage:
 
-<img src="tests/testthat/test_img/InstaRF_covr.png" border = "5" width="400" height="253"/>
+<img src="tests/testthat/test_img/InstaRF_covr.png" border = "5" width="460" height="200"/>
 
 The functions passed all the tests:
 
-<img src="tests/testthat/test_img/Test_pass_results.png" border = "5" width="400" height="253"/>
+<img src="tests/testthat/test_img/Test_pass_results.png" border = "5" width="460" height="200"/>
 
 and R cmd test was also passed:
 
-<img src="tests/testthat/test_img/CMD_check_results.png" border = "5" width="400" height="253"/>
+<img src="tests/testthat/test_img/CMD_check_results.png" border = "5" width="460" height="200"/>
 
 ## Unit tests results
 
@@ -144,7 +144,7 @@ In the root of the repository, input `devtool::test()` or `devtool::check()`, th
 
 Results for `devtool::test()`
 
-<img src="tests/testthat/test_img/test_result.png" border = "5" width="400" height="253"/>
+<img src="tests/testthat/test_img/test_result.png" border = "5" width="460" height="200"/>
 
 ## Package dependencies
 ||||
