@@ -49,7 +49,6 @@ Installing InstaRF is easy with only the following two steps:
 
 1. Open your R studio
 2. Enter ```devtools::install_github("UBC-MDS/InstaRF", build_opts = c("--no-resave-data", "--no-manual"))``` to console.
-[Devtools_syntax_update](https://github.com/r-lib/devtools/issues/1896)
 
 ## Usage
 
