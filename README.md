@@ -68,7 +68,7 @@ Arguments:
 
 Example:
 
-```gaussian_blur("test/test_image/carnovsky_RGB_1.png", "test/test_image/test.png", filter_shape = (3,3), sigma = 1)```
+```gaussian_blur("tests/testthat/test_img/carnovsky_RGB_1.png", "tests/testthat/test_img/test.png", filter_shape = (3,3), sigma = 1)```
 
 Before:
 
@@ -90,7 +90,7 @@ Arguments:
 * ```G```: Adjusting intensity for green channel (integer)
 
 Example:
-```RGB_manipulation("test/test_image/carnovsky_RGB_1.png", "test/test_image/Carnovsky_RGB_manipulated.png", R = 1, G = 1, B = 5)```
+```RGB_manipulation(""tests/testthat/test_img/carnovsky_RGB_1.png", "tests/testthat/test_img/Carnovsky_RGB_manipulated.png", R = 1, G = 1, B = 5)```
 
 Before:
 
@@ -111,7 +111,7 @@ Arguments:
 
 Example:
 
-```laplacian_filter("test/test_image/IMG_2036.PNG", "test/test_image/IMG_2037.PNG")```
+```laplacian_filter("tests/testthat/test_img/test_img_laplacian_bird_before.png", "tests/testthat/test_img/test_img_laplacian_bird_after.png")```
 
 Before:
 
