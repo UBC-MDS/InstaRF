@@ -18,5 +18,7 @@ png file at the output path
 laplacian edge detecting
 }
 \examples{
-laplacian_filter("input,png", "output.png")
+\dontrun{
+laplacian_filter("input.png", "output.png")
+}
 }

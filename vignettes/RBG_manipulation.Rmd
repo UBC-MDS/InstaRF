@@ -1,0 +1,30 @@
+---
+title: "RGB_manipulation"
+author: "Betty Zhou"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+`RGB_manipulation("input.png", "output.png", R = 2L, G = 2L, B = 2L)` adjusts the red, green and blue intensity of an image.
+
+Inputs:
+  - input_path: string, path to the input .png file
+  - output_path: string, path to the output .png file
+  - R: int, a weight value for red channel, equal to or greater than 0.
+  - G: int, a weight value for green channel, equal to or greater than 0.
+  - B: int, a weight value for blue channel, equal to or greater than 0.
+
+Output: returns a .png file at the output path
+
+Example: `RGB_manipulation("input.png", "output.png", R = 5L, G = 1L, B = 1L)`

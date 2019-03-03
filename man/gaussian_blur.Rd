@@ -4,12 +4,14 @@
 \alias{gaussian_blur}
 \title{Gaussian blur}
 \usage{
-gaussian_blur(input_img, output_img)
+gaussian_blur(input_image_directory, output_image_directory, sigma)
 }
 \arguments{
-\item{input_img}{string, path to the input .png file}
+\item{input_image_directory}{string, path to the input .png file}
 
-\item{output_img}{string, path to the output .png file}
+\item{output_image_directory}{string, path to the output .png file}
+
+\item{sigma}{double, the sd of the gaussian distribution}
 }
 \value{
 png file at the output path
@@ -18,5 +20,7 @@ png file at the output path
 Gaussian blur
 }
 \examples{
-gaussian_blur("input,png", "output.png")
+\dontrun{
+gaussian_blur("test.png", "test_output.png", sigma = 1)
+}
 }
