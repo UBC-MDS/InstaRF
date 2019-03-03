@@ -44,7 +44,7 @@ Image processing uses computer algorithms to enhance an image or to extract usef
   * [LICENSE](LICENSE)
   * README.md
   
-## Installation (*** needs update ***)
+## Installation 
 
 Installing InstaRF is easy with only the following two steps:
 
