@@ -1,5 +1,5 @@
 # InstaRF Proposal
-<img src="InstaRF/tests/testthat/test_img/logo.png" align="right" border = "5" width="275" height="200"/>
+<img src="tests/testthat/test_img/logo.png" align="right" border = "5" width="275" height="200"/>
 
 ## Contributors:
 
@@ -72,11 +72,11 @@ Example:
 
 Before:
 
-<img src="InstaRF/test/test_image/carnovsky_RGB_1.png" border = "5" width="350" height="157"/>
+<img src="test/testthat/test_img/carnovsky_RGB_1.png" border = "5" width="350" height="157"/>
 
 After:
 
-<img src="InstaF_Python/test/test_image/test.png" border = "5" width="350" height="157"/>
+<img src="test/testthat/test_img/test.png" border = "5" width="350" height="157"/>
 
 #### 2. RGB manipulation
 ```RGB_manipulation(input_path, output_path, R = 2, G = 2, B = 2)```
@@ -94,11 +94,11 @@ Example:
 
 Before:
 
-<img src="InstaF_Python/test/test_image/carnovsky_RGB_1.png" border = "5" width="350" height="157"/>
+<img src="test/testthat/test_img/carnovsky_RGB_1.png" border = "5" width="350" height="157"/>
 
 After:
 
-<img src="InstaF_Python/test/test_image/Carnovsky_RGB_manipulated.png" border = "5" width="350" height="157"/>
+<img src="test/testthat/test_img/Carnovsky_RGB_manipulated.png" border = "5" width="350" height="157"/>
 
 
 #### 3. Laplacian Edge Detecting
@@ -115,11 +115,11 @@ Example:
 
 Before:
 
-<img src="InstaF_Python/test/test_image/IMG_2036.PNG" border = "5" width="199" height="253"/>
+<img src="test/testthat/test_img/test_img_laplacian_bird_before.png" border = "5" width="199" height="253"/>
 
 After:
 
-<img src="InstaF_Python/test/test_image/IMG_2037.PNG" border = "5" width="199" height="253"/>
+<img src="test/testthat/test_img/test_img_laplacian_bird_after.png" border = "5" width="199" height="253"/>
 
 ## Package dependencies
 |||
