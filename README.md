@@ -1,5 +1,5 @@
 # InstaRF Proposal
-<img src="tests/testthat/test_img/logo.png" align="right" border = "5" width="275" height="200"/>
+<img src="./tests/testthat/test_img/logo.png" align="right" border = "5" width="275" height="200"/>
 
 ## Contributors:
 
