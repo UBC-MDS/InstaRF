@@ -58,7 +58,7 @@ Installing InstaRF is easy with only the following two steps:
 ## Functions 
 
 #### 1. Gaussian Blur
-```gaussian_blur(input_image_path, output_image_path, filter_shape = (3,3), sigma = 1)```
+```gaussian_blur(input_image_path, output_image_path, sigma = 1)```
 
 Arguments:
 
@@ -69,15 +69,15 @@ Arguments:
 
 Example:
 
-```gaussian_blur("tests/testthat/test_img/carnovsky_RGB_1.png", "tests/testthat/test_img/test.png", filter_shape = (3,3), sigma = 1)```
+```gaussian_blur("tests/testthat/test_img/carnovsky_RGB_1.png", "tests/testthat/test_img/test.png", sigma = 1)```
 
 Before:
 
-<img src="tests/testthat/test_img/carnovsky_RGB_1.png" border = "5" width="350" height="157"/>
+<img src="tests/testthat/test_img/input_image.png" border = "5" width="350" height="157"/>
 
 After:
 
-<img src="tests/testthat/test_img/test.png" border = "5" width="350" height="157"/>
+<img src="tests/testthat/test_img/exp_output.png" border = "5" width="350" height="157"/>
 
 #### 2. RGB manipulation
 ```RGB_manipulation(input_path, output_path, R = 2, G = 2, B = 2)```
@@ -95,11 +95,11 @@ Example:
 
 Before:
 
-<img src="tests/testthat/test_img/carnovsky_RGB_1.png" border = "5" width="350" height="157"/>
+<img src="tests/testthat/test_img/input_image.png" border = "5" width="350" height="157"/>
 
 After:
 
-<img src="tests/testthat/test_img/Carnovsky_RGB_manipulated.png" border = "5" width="350" height="157"/>
+<img src="tests/test_img/Carnovsky_RGB_manipulated.png" border = "5" width="350" height="157"/>
 
 
 #### 3. Laplacian Edge Detecting
@@ -128,18 +128,25 @@ The package passed all the tests that were planned before.
 
 It had 100% branch coverage:
 
-<img src="tests/testthat/test_img/InstaRF_covr.png" border = "5" width="199" height="253"/>
+<img src="tests/testthat/test_img/InstaRF_covr.png" border = "5" width="500" height="200"/>
 
 The functions passed all the tests:
 
-<img src="tests/testthat/test_img/Test_pass_results.png" border = "5" width="199" height="253"/>
+<img src="tests/testthat/test_img/Test_pass_results.png" border = "5" width="460" height="200"/>
 
 and R cmd test was also passed:
 
-<img src="tests/testthat/test_img/CMD_check_results.png" border = "5" width="199" height="253"/>
+<img src="tests/testthat/test_img/CMD_check_results.png" border = "5" width="500" height="200"/>
 
+## Unit tests results
+
+In the root of the repository, input `devtool::test()` or `devtool::check()`, the former will generate the test units reports and the later will give you a full report of the package.
+
+Results for `devtool::test()`
+
+<img src="tests/testthat/test_img/test_result.png" border = "5" width="500" height="200"/>
 
 ## Package dependencies
-|||
-|---|---|
-|testthat|             png|
+||||
+|---|---|---|
+|testthat|png|spatialfil|
