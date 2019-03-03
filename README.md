@@ -1,5 +1,5 @@
 # InstaRF Proposal
-<img src="./tests/testthat/test_img/logo.png" align="right" border = "5" width="275" height="200"/>
+<img src="tests/testthat/test_img/logo.png" align="right" border = "5" width="275" height="200"/>
 
 ## Contributors:
 
@@ -23,7 +23,7 @@ Image processing uses computer algorithms to enhance an image or to extract usef
 
 ## R Ecosystem
 
-[InstaR]( https://github.com/UBC-MDS/InstaR/tree/v4.0) is a R package that contains the three functions: blur, flip and greyscale to transform images. In this project, we plan to implement three more image processing functions in R by exploring additional filters.
+[InstaR]( https://github.com/UBC-MDS/InstaR/tree/v4.0) is a R package that contains the three functions: blur, flip and greyscale to transform images. It is important to note that are several packages that have similar image processing functionality (e.g. spatstat has its own Gaussian blur function). In this project, we plan to implement three more image processing functions in R by exploring additional filters.
 
 ## Repo structure:
 
