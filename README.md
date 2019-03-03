@@ -1,5 +1,5 @@
 # InstaRF Proposal
-<img src="tests/testthat/test_img/logo.png" align="right" border = "5" width="275" height="200"/>
+<img src="InstaRF/tests/testthat/test_img/logo.png" align="right" border = "5" width="275" height="200"/>
 
 ## Contributors:
 
@@ -72,7 +72,7 @@ Example:
 
 Before:
 
-<img src="InstaF_Python/test/test_image/carnovsky_RGB_1.png" border = "5" width="350" height="157"/>
+<img src="InstaRF/test/test_image/carnovsky_RGB_1.png" border = "5" width="350" height="157"/>
 
 After:
 
