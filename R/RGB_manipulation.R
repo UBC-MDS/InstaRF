@@ -1,3 +1,6 @@
+library(png)
+library(testit)
+
 #' RGB manipulation
 #'
 #' @param input_path string, path to the input .png file
@@ -9,10 +12,9 @@
 #' @export
 #'
 #' @examples
+#' \dontrun{
 #' RGB_manipulation("input.png", "output.png", R = 5L, G = 1L, B = 1L)
-
-library(png)
-library(testit)
+#' }
 
 RGB_manipulation <- function(input_path, output_path, R = 2L, G = 2L, B = 2L){
 

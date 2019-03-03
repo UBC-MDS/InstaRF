@@ -1,3 +1,6 @@
+library(png)
+library(spatialfil)
+
 #' Gaussian blur
 #'
 #' @param input_image_directory string, path to the input .png file
@@ -7,11 +10,9 @@
 #' @export
 #'
 #' @examples
+#' \dontrun{
 #' gaussian_blur("test.png", "test_output.png", sigma = 1)
-
-
-library(png)
-library(spatialfil)
+#' }
 
 gaussian_blur <- function(input_image_directory, output_image_directory, sigma){
 

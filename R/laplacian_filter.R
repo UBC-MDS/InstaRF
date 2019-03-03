@@ -1,3 +1,5 @@
+library(png)
+
 #' laplacian edge detecting
 #'
 #' @param input_img string, path to the input .png file
@@ -6,9 +8,9 @@
 #' @export
 #'
 #' @examples
+#' \dontrun{
 #' laplacian_filter("input.png", "output.png")
-
-library(png)
+#' }
 
 laplacian_filter <- function(input_img, output_img) {
 
