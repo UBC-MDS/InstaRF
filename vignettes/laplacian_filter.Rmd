@@ -1,0 +1,33 @@
+---
+title: "Laplacian Filter" 
+author: "Simon Chiu "
+date: "Mar 2 2019"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+`laplacian_edge_detecting(input_image, output_image)`
+Apply the Laplacian edge detecting method
+
+Arguments:
+
+ - input_path: Path to the input image
+ - output_path: Path to the output image
+
+Output:
+
+ - A png file at the output path
+
+Example:
+
+`laplacian_filter("test_image/IMG_2036.PNG", "test_image/IMG_2037.PNG")`

@@ -4,18 +4,18 @@
 \alias{RGB_manipulation}
 \title{RGB manipulation}
 \usage{
-RGB_manipulation(input_img, R = 1, G = 1, B = 1, output_img)
+RGB_manipulation(input_path, output_path, R = 2L, G = 2L, B = 2L)
 }
 \arguments{
-\item{input_img}{string, path to the input .png file}
+\item{input_path}{string, path to the input .png file}
 
-\item{R}{int, a weight value, equal to or greater than 1, for red the filter}
+\item{output_path}{string, path to the output .png file}
 
-\item{G}{int, a weight value, equal to or greater than 1, for green the filter}
+\item{R}{int, a weight value for red channel, equal to or greater than 0.}
 
-\item{B}{int, a weight value, equal to or greater than 1, for blue the filter}
+\item{G}{int, a weight value for green channel, equal to or greater than 0.}
 
-\item{output_img}{string, path to the output .png file}
+\item{B}{int, a weight value for blue channel, equal to or greater than 0.}
 }
 \value{
 png file at the output path
@@ -24,5 +24,7 @@ png file at the output path
 RGB manipulation
 }
 \examples{
-RGB_manipulation("input.png", 1, 2, 3, "output.png")
+\dontrun{
+RGB_manipulation("input.png", "output.png", R = 5L, G = 1L, B = 1L)
+}
 }
