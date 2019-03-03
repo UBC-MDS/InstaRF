@@ -54,7 +54,7 @@ Installing InstaRF is easy with only the following two steps:
 
 ```library(InstaRF)```
 
-## Functions (*** needs update ***)
+## Functions 
 
 #### 1. Gaussian Blur
 ```gaussian_blur(input_image_path, output_image_path, filter_shape = (3,3), sigma = 1)```
@@ -72,11 +72,11 @@ Example:
 
 Before:
 
-<img src="test/testthat/test_img/carnovsky_RGB_1.png" border = "5" width="350" height="157"/>
+<img src="tests/testthat/test_img/carnovsky_RGB_1.png" border = "5" width="350" height="157"/>
 
 After:
 
-<img src="test/testthat/test_img/test.png" border = "5" width="350" height="157"/>
+<img src="tests/testthat/test_img/test.png" border = "5" width="350" height="157"/>
 
 #### 2. RGB manipulation
 ```RGB_manipulation(input_path, output_path, R = 2, G = 2, B = 2)```
@@ -94,11 +94,11 @@ Example:
 
 Before:
 
-<img src="test/testthat/test_img/carnovsky_RGB_1.png" border = "5" width="350" height="157"/>
+<img src="tests/testthat/test_img/carnovsky_RGB_1.png" border = "5" width="350" height="157"/>
 
 After:
 
-<img src="test/testthat/test_img/Carnovsky_RGB_manipulated.png" border = "5" width="350" height="157"/>
+<img src="tests/testthat/test_img/Carnovsky_RGB_manipulated.png" border = "5" width="350" height="157"/>
 
 
 #### 3. Laplacian Edge Detecting
@@ -115,11 +115,28 @@ Example:
 
 Before:
 
-<img src="test/testthat/test_img/test_img_laplacian_bird_before.png" border = "5" width="199" height="253"/>
+<img src="tests/testthat/test_img/test_img_laplacian_bird_before.png" border = "5" width="199" height="253"/>
 
 After:
 
-<img src="test/testthat/test_img/test_img_laplacian_bird_after.png" border = "5" width="199" height="253"/>
+<img src="tests/testthat/test_img/test_img_laplacian_bird_after.png" border = "5" width="199" height="253"/>
+
+## Branch coverage
+
+The package passed all the tests that were planned before.
+
+It had 100% branch coverage:
+
+<img src="tests/testthat/test_img/InstaRF_covr.png" border = "5" width="199" height="253"/>
+
+The functions passed all the tests:
+
+<img src="tests/testthat/test_img/Test_pass_results.png" border = "5" width="199" height="253"/>
+
+and R cmd test was also passed:
+
+<img src="tests/testthat/test_img/CMD_check_results.png" border = "5" width="199" height="253"/>
+
 
 ## Package dependencies
 |||
