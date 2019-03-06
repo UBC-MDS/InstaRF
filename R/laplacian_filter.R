@@ -15,9 +15,9 @@ library(testit)
 
 laplacian_filter <- function(input_img, output_img) {
   
-  # exception handling
-  assert("Please provide a string as the path for the input image file.", is.character(input_img))
-  assert("Please provide a string as the path for the output image file.", is.character(output_img))
+  # exception handling, Raise an Error if the path is not a string
+  testit::assert("Please provide a string as the path for the input image file.", is.character(input_img))
+  testit::assert("Please provide a string as the path for the output image file.", is.character(output_img))
   
   # Exception handling, Raise an Error if file doesn't exist
   mtry <- try(png::readPNG(input_img), silent = TRUE)
