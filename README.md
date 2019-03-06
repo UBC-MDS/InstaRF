@@ -2,6 +2,7 @@
 
 <img src="tests/testthat/test_img/logo.png" align="right" border = "5" width="275" height="200"/>
 
+[![Build Status](https://travis-ci.org/UBC-MDS/InstaRF.svg?branch=master)](https://travis-ci.org/UBC-MDS/InstaRF)
 
 ## Contributors:
 
