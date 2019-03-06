@@ -1,3 +1,6 @@
+library(png)
+library(testit)
+
 #' laplacian edge detecting
 #'
 #' @param input_img string, path to the input .png file
@@ -10,8 +13,6 @@
 #' laplacian_filter("input.png", "output.png")
 #' }
 
-library(png)
-library(testit)
 
 laplacian_filter <- function(input_img, output_img) {
   
