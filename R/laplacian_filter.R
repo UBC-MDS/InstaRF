@@ -1,4 +1,5 @@
 library(png)
+library(testit)
 
 #' laplacian edge detecting
 #'
@@ -12,7 +13,19 @@ library(png)
 #' laplacian_filter("input.png", "output.png")
 #' }
 
+
 laplacian_filter <- function(input_img, output_img) {
+  
+  # exception handling, Raise an Error if the path is not a string
+  testit::assert("Please provide a string as the path for the input image file.", is.character(input_img))
+  testit::assert("Please provide a string as the path for the output image file.", is.character(output_img))
+  
+  # Exception handling, Raise an Error if file doesn't exist
+  mtry <- try(png::readPNG(input_img), silent = TRUE)
+
+  if (class(mtry) == "try-error") {
+    stop("File doesn't exist!")
+  }
 
   #add tests to address test unit
   #no need - readPNG throws error to take care of tests in test unit
@@ -53,7 +66,13 @@ laplacian_filter <- function(input_img, output_img) {
   }
   #print(output)
   #save the output
-  png::writePNG(output, target=output_img)
+  
+  # Exception handling, Raise an Error if output path doesn't exist
+  mtry <- try(png::writePNG(output, target=output_img), silent = TRUE)
 
+  if (class(mtry) == "try-error") {
+    stop("Output Path doesn't exist!")
+  }
+  
   return(output)
 }
