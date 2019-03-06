@@ -1,5 +1,6 @@
 library(png)
 library(spatialfil)
+library(testit)
 
 #' Gaussian blur
 #'
@@ -15,7 +16,19 @@ library(spatialfil)
 #' }
 
 gaussian_blur <- function(input_image_directory, output_image_directory, sigma){
-
+  
+  # Exceptional handling to make sure input directory and output directory are string and sigma is a number
+  testit::assert("Please provide the input path as a string", is.character(input_image_directory))
+  testit::assert("Please provide the output path as a string", is.character(output_image_directory))
+  testit::assert("Please provide a number for sigma", is.numeric(sigma))
+  
+  # Exception handling, Raise an Error if file or input path doesn't exist
+  mtry <- try(png::readPNG(input_image_directory), silent = TRUE)
+  
+  if (class(mtry) == "try-error") {
+    stop("Input path or file doesn't exist!")
+  }
+  
   input_img <- png::readPNG(input_image_directory)
   image_demention <- dim(input_img)
 
@@ -64,7 +77,14 @@ gaussian_blur <- function(input_image_directory, output_image_directory, sigma){
     }
   }
 }
-png::writePNG(output_img, output_image_directory)
+
+
+# Exception handling, Raise an Error if output path doesn't exist
+mtry <- try(png::writePNG(output_img, output_image_directory), silent = TRUE)
+  
+if (class(mtry) == "try-error") {
+    stop("Output Path doesn't exist!")
+}     
 
 return(output_img)
 
