@@ -1,5 +1,7 @@
 # InstaRF Proposal
-<img src="test_r/test_image/logo.png" align="right" border = "5" width="275" height="200"/>
+
+<img src="tests/testthat/test_img/logo.png" align="right" border = "5" width="275" height="200"/>
+
 
 ## Contributors:
 
@@ -23,7 +25,7 @@ Image processing uses computer algorithms to enhance an image or to extract usef
 
 ## R Ecosystem
 
-[InstaR]( https://github.com/UBC-MDS/InstaR/tree/v4.0) is a R package that contains the three functions: blur, flip and greyscale to transform images. In this project, we plan to implement three more image processing functions in R by exploring additional filters.
+ It is important to note that are several packages that have similar image processing functionality. For example, [InstaR]( https://github.com/UBC-MDS/InstaR/tree/v4.0) is a R package that contains the three functions: blur, flip and greyscale to transform images. Or a similar package called [magick](https://cran.r-project.org/web/packages/magick/index.html) exists which has some image processing filters like blur, crop and trim.  In this project, we plan to implement three more image processing functions in R by exploring additional filters.
 
 ## Repo structure:
 
@@ -42,22 +44,21 @@ Image processing uses computer algorithms to enhance an image or to extract usef
   * [LICENSE](LICENSE)
   * README.md
   
-## Installation (*** needs update ***)
+## Installation 
 
 Installing InstaRF is easy with only the following two steps:
 
 1. Open your R studio
 2. Enter ```devtools::install_github("UBC-MDS/InstaRF", build_opts = c("--no-resave-data", "--no-manual"))``` to console.
-[Devtools_syntax_update](https://github.com/r-lib/devtools/issues/1896)
 
 ## Usage
 
 ```library(InstaRF)```
 
-## Functions (*** needs update ***)
+## Functions 
 
 #### 1. Gaussian Blur
-```gaussian_blur(input_image_path, output_image_path, filter_shape = (3,3), sigma = 1)```
+```gaussian_blur(input_image_path, output_image_path, sigma = 1)```
 
 Arguments:
 
@@ -68,15 +69,15 @@ Arguments:
 
 Example:
 
-```gaussian_blur("test/test_image/carnovsky_RGB_1.png", "test/test_image/test.png", filter_shape = (3,3), sigma = 1)```
+```gaussian_blur("tests/testthat/test_img/carnovsky_RGB_1.png", "tests/testthat/test_img/test.png", sigma = 1)```
 
 Before:
 
-<img src="InstaF_Python/test/test_image/carnovsky_RGB_1.png" border = "5" width="350" height="157"/>
+<img src="tests/testthat/test_img/input_image.png" border = "5" width="350" height="157"/>
 
 After:
 
-<img src="InstaF_Python/test/test_image/test.png" border = "5" width="350" height="157"/>
+<img src="tests/testthat/test_img/exp_output.png" border = "5" width="350" height="157"/>
 
 #### 2. RGB manipulation
 ```RGB_manipulation(input_path, output_path, R = 2, G = 2, B = 2)```
@@ -90,15 +91,15 @@ Arguments:
 * ```G```: Adjusting intensity for green channel (integer)
 
 Example:
-```RGB_manipulation("test/test_image/carnovsky_RGB_1.png", "test/test_image/Carnovsky_RGB_manipulated.png", R = 1, G = 1, B = 5)```
+```RGB_manipulation(""tests/testthat/test_img/carnovsky_RGB_1.png", "tests/testthat/test_img/Carnovsky_RGB_manipulated.png", R = 1, G = 1, B = 5)```
 
 Before:
 
-<img src="InstaF_Python/test/test_image/carnovsky_RGB_1.png" border = "5" width="350" height="157"/>
+<img src="tests/testthat/test_img/input_image.png" border = "5" width="350" height="157"/>
 
 After:
 
-<img src="InstaF_Python/test/test_image/Carnovsky_RGB_manipulated.png" border = "5" width="350" height="157"/>
+<img src="tests/test_img/Carnovsky_RGB_manipulated.png" border = "5" width="350" height="157"/>
 
 
 #### 3. Laplacian Edge Detecting
@@ -111,17 +112,41 @@ Arguments:
 
 Example:
 
-```laplacian_filter("test/test_image/IMG_2036.PNG", "test/test_image/IMG_2037.PNG")```
+```laplacian_filter("tests/testthat/test_img/test_img_laplacian_bird_before.png", "tests/testthat/test_img/test_img_laplacian_bird_after.png")```
 
 Before:
 
-<img src="InstaF_Python/test/test_image/IMG_2036.PNG" border = "5" width="199" height="253"/>
+<img src="tests/testthat/test_img/test_img_laplacian_bird_before.png" border = "5" width="199" height="253"/>
 
 After:
 
-<img src="InstaF_Python/test/test_image/IMG_2037.PNG" border = "5" width="199" height="253"/>
+<img src="tests/testthat/test_img/test_img_laplacian_bird_after.png" border = "5" width="199" height="253"/>
+
+## Branch coverage
+
+The package passed all the tests that were planned before.
+
+It had 100% branch coverage:
+
+<img src="tests/testthat/test_img/InstaRF_covr.png" border = "5" width="500" height="200"/>
+
+The functions passed all the tests:
+
+<img src="tests/testthat/test_img/Test_pass_results.png" border = "5" width="460" height="200"/>
+
+and R cmd test was also passed:
+
+<img src="tests/testthat/test_img/CMD_check_results.png" border = "5" width="500" height="200"/>
+
+## Unit tests results
+
+In the root of the repository, input `devtool::test()` or `devtool::check()`, the former will generate the test units reports and the later will give you a full report of the package.
+
+Results for `devtool::test()`
+
+<img src="tests/testthat/test_img/test_result.png" border = "5" width="500" height="200"/>
 
 ## Package dependencies
-|||
-|---|---|
-|testthat|             png|
+||||
+|---|---|---|
+|testthat|png|spatialfil|
