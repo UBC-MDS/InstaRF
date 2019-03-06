@@ -109,7 +109,7 @@ Before:
 
 After:
 
-<img src="tests/test_img/Carnovsky_RGB_manipulated.png" border = "5" width="350" height="157"/>
+<img src="tests/testthat/test_img/Carnovsky_RGB_manipulated.png" border = "5" width="350" height="157"/>
 
 
 #### 3. Laplacian Edge Detecting
