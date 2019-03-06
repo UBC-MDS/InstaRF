@@ -25,6 +25,13 @@ RGB_manipulation <- function(input_path, output_path, R = 2L, G = 2L, B = 2L){
   testit::assert("Please provide green channel weight as integer", is.integer(G))
   testit::assert("Please provide blue channel weight as integer", is.integer(B))
 
+  # Exception handling, Raise an Error if file doesn't exist
+  mtry <- try(png::readPNG(input_path), silent = TRUE)
+  
+  if (class(mtry) == "try-error") {
+    stop("Input path doesn't exist!")
+  }
+  
   # read in image from input path
   img <- png::readPNG(input_path) * 255
 
@@ -56,7 +63,15 @@ RGB_manipulation <- function(input_path, output_path, R = 2L, G = 2L, B = 2L){
                   dim = c(h,w,3))
 
   # save RGB manipulated image to output path
-  png::writePNG(output/255, output_path)
+  
+                   
+  # Exception handling, Raise an Error if output path doesn't exist
+  mtry <- try(png::writePNG(output/255, output_path), silent = TRUE)
+  
+  if (class(mtry) == "try-error") {
+    stop("Output Path doesn't exist!")
+  }                
+                   
 }
 
 
