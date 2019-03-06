@@ -43,19 +43,28 @@ Image processing uses computer algorithms to enhance an image or to extract usef
   * [Code_of_CONDUCT.md](Code_of_CONDUCT.md)
   * [LICENSE](LICENSE)
   * README.md
-  
-## Installation 
+
+
+## Installation
 
 Installing InstaRF is easy with only the following two steps:
 
 1. Open your R studio
 2. Enter ```devtools::install_github("UBC-MDS/InstaRF", build_opts = c("--no-resave-data", "--no-manual"))``` to console.
 
+To build vignettes:
+
+1. devtools::check()
+2. devtools::build_vignettes()
+3. browseVignettes(package ='InstaRF')
+
+
 ## Usage
 
 ```library(InstaRF)```
 
-## Functions 
+
+## Functions
 
 #### 1. Gaussian Blur
 ```gaussian_blur(input_image_path, output_image_path, sigma = 1)```
