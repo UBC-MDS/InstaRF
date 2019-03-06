@@ -44,6 +44,7 @@ Image processing uses computer algorithms to enhance an image or to extract usef
   * [LICENSE](LICENSE)
   * README.md
 
+
 ## Installation
 
 Installing InstaRF is easy with only the following two steps:
@@ -56,9 +57,11 @@ To build vignettes:
 1. devtools::install_github("UBC-MDS/InstaRF", build_opts = c("--no-resave-data", "--no-manual"))
 2. browseVignettes(package ='InstaRF')
 
+
 ## Usage
 
 ```library(InstaRF)```
+
 
 ## Functions
 
