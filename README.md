@@ -53,9 +53,8 @@ Installing InstaRF is easy with only the following two steps:
 
 To build vignettes:
 
-1. devtools::check()
-2. devtools::build_vignettes()
-3. browseVignettes(package ='InstaRF')
+1. devtools::install_github("UBC-MDS/InstaRF", build_opts = c("--no-resave-data", "--no-manual"))
+2. browseVignettes(package ='InstaRF')
 
 ## Usage
 
