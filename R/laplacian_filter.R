@@ -6,7 +6,9 @@
 #' @export
 #'
 #' @examples
+#' \dontrun{
 #' laplacian_filter("input.png", "output.png")
+#' }
 
 library(png)
 library(testit)
